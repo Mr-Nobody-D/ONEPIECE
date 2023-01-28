@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to The One Piece Universe</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1>What's this website about?</h1>
+    <p>This is where you can discover your true identity in the whole One Piece Universe.
+        Are you a marine loser like Fullbody or are you a great pirate who will become the 
+        Pirate King and bring a new Pirate Era to the world? Find it out trying one of our Quizzs.
+    </p>
+    <p> YOU WILL NOW BE DOING A ONE PIECE QUIZ: 
+
+    </p>
+    <p> PLEASE RESPOND ONLY WITH "Yes" or "No", UNTIL IT GETS A RESULT, OTHERWISE YOU WON'T GET A RESULT.
+
+    </p>
+    <p> Thank you for your time. </p>
+    <py-script>
+        import random
+        list = ["Zoro","Luffy", "Sanji", "Brook", "Robin", "Franky", "Nami", "Chopper", "Usopp", "Jinbe"]
+        list_perguntas = ["Do you consider yourself lazy?", "Do you know how to cook?", "Are you tall?", "Do you have devil fruit?",
+         "Are you human?", "Are you older than 21?", "Is your bounty 1B bellie or more?", "Are you male?"]
+        list_utilizadas = []
+        
+        while True:
+            #PROBLEMA EM BAIXO "Ao acabar de meter todas as perguntas a expressão em baixo deve anular o loop while True e dar break"
+            if len(list) == 1 or len(list_utilizadas) == 8:
+                print("You are", list[0], "!")
+                break
+            pergunta = random.randint(0, len(list_perguntas)-1)
+            if pergunta in list_utilizadas:
+                continue
+            else:
+                list_utilizadas.append(pergunta)
+            print(list_perguntas[pergunta])
+        
+            x = str(input())
+            if x == "Yes":
+                if pergunta == 0:
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Nami" in list:
+                        list.remove("Nami")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    
+                elif pergunta == 1:
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Brook" in list:
+                        list.remove("Brook")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+        
+                elif pergunta == 2:
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Nami" in list:
+                        list.remove("Nami")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+        
+                elif pergunta == 3:
+                    if "Nami" in list:
+                        list.remove("Nami")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                
+                elif pergunta == 4:
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Brook" in list:
+                        list.remove("Brook")
+        
+                elif pergunta == 5:
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Nami" in list:
+                        list.remove("Nami")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+        
+                elif pergunta == 6:
+                    if "Brook" in list:
+                        list.remove("Brook")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Nami" in list:
+                        list.remove("Nami")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+                    if "Robin" in list:
+                        list.remove("Robin")
+        
+                elif pergunta == 7:
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Nami" in list:
+                        list.remove("Nami")
+        
+            elif x == "No":
+                if pergunta == 0:
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Brook" in list:
+                        list.remove("Brook")
+                     
+                elif pergunta == 1:
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Nami" in list:
+                        list.remove("Nami")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+        
+                elif pergunta == 2:
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                    if "Brook" in list:
+                        list.remove("Brook")
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+        
+                elif pergunta == 3:
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Brook" in list:
+                        list.remove("Brook")
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+        
+                elif pergunta == 4:
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+                    if "Nami" in list:
+                        list.remove("Nami")
+        
+                elif pergunta == 5:
+                    if "Robin" in list:
+                        list.remove("Robin")
+                    if "Brook" in list:
+                        list.remove("Brook")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    if "Franky" in list:
+                        list.remove("Franky")
+        
+                elif pergunta == 6:
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+        
+                elif pergunta == 7:
+                    if "Zoro" in list:
+                        list.remove("Zoro")
+                    if "Sanji" in list:
+                        list.remove("Sanji")
+                    if "Franky" in list:
+                        list.remove("Franky")
+                    if "Chopper" in list:
+                        list.remove("Chopper")
+                    if "Usopp" in list:
+                        list.remove("Usopp")
+                    if "Jinbe" in list:
+                        list.remove("Jinbe")
+                    if "Luffy" in list:
+                        list.remove("Luffy")
+                    if "Brook" in list:
+                        list.remove("Brook")
+        
+            else:
+                print("Please answer: Yes or No")
+                list_utilizadas.remove(pergunta) </py-script>|
+</body>
+
+
+</html>
